@@ -1,11 +1,28 @@
 package com.baktajivan;
+
+import java.util.Arrays;
+
 //link followers to their acc from getfol class
 public class Linking {
-    //public GetFol.getFol();//letak under a method later
-    public static String folList = GetFol.followers;
-    String [] dataFol = folList.split(" ");
+    //followers name
+    static String fol = GetFol.followers;
+    static String [] arrFol = fol.split(" ");
+    //followers info
+    static String datafol = GetStats.data;
+    static String [] arrStat = datafol.split("");
+    //combine into row column array
+    private static String [][] arrData = new String[arrFol.length][arrStat.length];
 
-    public static Linking[][] linkdata;
+    public static void Link(){
+        for (int i=0; i<arrData.length; i++) {
+            for(int j=0; j<arrData[i].length; j++){
+                arrData[i] = arrFol[i].split(",");
+                arrData[i][j] = Arrays.toString(arrStat[j].split(" "));
+                String testing = Arrays.toString(arrData);
+                System.out.println(testing);
+            }//for j
+        }//for i
+    }
 
     /*//public static void link(){
         for (int i =0;i<folList.length;i++){

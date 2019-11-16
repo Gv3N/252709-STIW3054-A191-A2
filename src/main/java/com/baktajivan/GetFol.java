@@ -81,7 +81,7 @@ public static Object[] folList;
             //converting array into string and removing the symbols
             //testing purpose only
             followers = Arrays.toString(folList).replace("[","").replace("]","").replace(",","");
-            System.out.println(followers);
+            //System.out.println(followers);
 
         } catch (IOException e) {
             e.printStackTrace();

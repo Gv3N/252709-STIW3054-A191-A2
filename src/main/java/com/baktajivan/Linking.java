@@ -18,10 +18,12 @@ public class Linking {
             for(int j=0; j<arrData[i].length; j++){
                 arrData[i] = arrFol[i].split(",");
                 arrData[i][j] = Arrays.toString(arrStat[j].split(" "));
-                String testing = Arrays.toString(arrData);
-                System.out.println(testing);
+
+                System.out.println(arrData[i][j]);
+
             }//for j
         }//for i
+
     }
 
     /*//public static void link(){
